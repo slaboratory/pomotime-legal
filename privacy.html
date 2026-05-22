@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - PomoTime</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #06b6d4;
+            /* Cyan matching the app seed color */
+            --primary-dark: #0891b2;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+            --border: #e5e7eb;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #22d3ee;
+                --primary-dark: #06b6d4;
+                --text-main: #f3f4f6;
+                --text-muted: #9ca3af;
+                --bg-body: #0b0f19;
+                --bg-card: #111827;
+                --border: #1f2937;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .logo-placeholder {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            border-radius: 16px;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 14px rgba(6, 182, 212, 0.4);
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        ul {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: var(--border);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-placeholder">P</div>
+            <h1>PomoTime Privacy Policy</h1>
+            <p class="subtitle">Effective Date: May 22, 2026</p>
+        </header>
+
+        <main class="card">
+            <div class="badge">Privacy Policy</div>
+
+            <section>
+                <h2>1. Introduction</h2>
+                <p>Welcome to <strong>PomoTime</strong> ("we", "our", "us"), a Pomodoro timer and productivity
+                    application developed by <strong>SLaboratory</strong>. We are committed to protecting your privacy.
+                    This Privacy Policy explains how we collect, use, and safeguard your information when you use our
+                    mobile application.</p>
+                <p>By using PomoTime, you agree to the terms described in this policy. If you do not agree, please do
+                    not use the application.</p>
+            </section>
+
+            <section>
+                <h2>2. Information We Collect</h2>
+                <p>PomoTime values privacy and aims to minimize data collection. We collect the following categories of
+                    data to provide and improve our services:</p>
+
+                <h3>A. Service Diagnostics and Usage (Third-Party Providers)</h3>
+                <p>We integrate several trusted industry-standard SDKs to monitor the app's performance, stability, and
+                    subscription services:</p>
+                <ul>
+                    <li><strong>Firebase Analytics (Google LLC):</strong> We collect anonymous, aggregated usage
+                        statistics (e.g., button clicks, feature usage, session duration) to understand how the app is
+                        used and improve the interface. No personally identifiable information (PII) is sent to Firebase
+                        Analytics.</li>
+                    <li><strong>Firebase Crashlytics (Google LLC):</strong> In the event of an app crash, we collect
+                        device-specific diagnostic information (such as operating system version, device model, and
+                        crash logs) to diagnose and fix software bugs. This data is strictly anonymous.</li>
+                    <li><strong>RevenueCat, Inc.:</strong> To manage premium in-app purchases and subscriptions, we
+                        process purchase history, transaction IDs, and subscription status. This data is associated with
+                        an anonymous app-user ID to verify your premium access.</li>
+                </ul>
+
+                <h3>B. Third-Party Integration (Spotify SDK)</h3>
+                <p>If you choose to link your Spotify account within PomoTime, the app uses the official Spotify App
+                    Remote SDK. This integration allows you to control audio playback from within the PomoTime
+                    application while working or resting.</p>
+                <ul>
+                    <li>We do not store or transmit your Spotify login credentials. All authentication is handled
+                        securely and directly by Spotify.</li>
+                    <li>We do not collect or monitor your listening history or library.</li>
+                </ul>
+
+                <h3>C. Local Data Storage</h3>
+                <p>Most of your data is stored strictly on your own device and never leaves it. This includes:</p>
+                <ul>
+                    <li>Timer settings, configurations, and completed intervals.</li>
+                    <li>Tasks and notes associated with your focus sessions.</li>
+                    <li>Local daily, weekly, and monthly productivity statistics.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. How We Use Your Information</h2>
+                <p>The information we collect is used exclusively for the following purposes:</p>
+                <ul>
+                    <li>To ensure the core functionality of the timer, tasks, and notifications.</li>
+                    <li>To verify, process, and maintain your premium subscriptions via RevenueCat.</li>
+                    <li>To monitor app performance and fix technical stability issues using Firebase Crashlytics.</li>
+                    <li>To continuously refine and optimize our user interface and experience based on Firebase
+                        Analytics.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Data Sharing and Disclosure</h2>
+                <p>We do not sell, trade, or rent your personal information to third parties. We only share information
+                    with trusted third-party service providers (Google Firebase and RevenueCat) as described in Section
+                    2, solely for the operational purposes of the application. These providers are bound by strict
+                    privacy policies and data protection regulations.</p>
+            </section>
+
+            <section>
+                <h2>5. Security of Your Data</h2>
+                <p>We take the security of your data seriously. We use commercially acceptable methods to safeguard the
+                    minor diagnostic and subscription information we process. However, please remember that no method of
+                    transmission over the internet or method of electronic storage is 100% secure, and we cannot
+                    guarantee absolute security.</p>
+            </section>
+
+            <section>
+                <h2>6. Children's Privacy</h2>
+                <p>PomoTime is a general productivity tool and is not directed at children under the age of 13. We do
+                    not knowingly collect personal identifiable information from children under 13. If you are a parent
+                    or guardian and you are aware that your child has provided us with personal data, please contact us
+                    so that we can perform necessary deletions.</p>
+            </section>
+
+            <section>
+                <h2>7. GDPR and international Users</h2>
+                <p>If you reside in the European Union (EU) or European Economic Area (EEA), you are protected by the
+                    General Data Protection Regulation (GDPR). Since we do not collect personal identifiable data (like
+                    your name or email address) on our servers, we cannot directly identify you. However, you can
+                    control analytics and data collection policies through your device's built-in privacy settings.
+                    Purchases can be managed directly through your Google Play Store Account settings.</p>
+            </section>
+
+            <section>
+                <h2>8. Changes to This Privacy Policy</h2>
+                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the
+                    new Privacy Policy on this page and updating the "Effective Date" at the top of the policy. You are
+                    advised to review this page periodically for any updates.</p>
+            </section>
+
+            <section>
+                <h2>9. Contact Us</h2>
+                <p>If you have any questions or suggestions about this Privacy Policy, do not hesitate to contact us at:
+                </p>
+                <p><strong>Email:</strong> <a href="mailto:slaboratory.dev@gmail.com">slaboratory.dev@gmail.com</a></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 SLaboratory. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
