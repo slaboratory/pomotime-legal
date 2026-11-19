@@ -8,25 +8,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #06b6d4;
-            /* Cyan matching the app seed color */
-            --primary-dark: #0891b2;
-            --text-main: #1f2937;
-            --text-muted: #4b5563;
-            --bg-body: #f9fafb;
+            --primary: #0e7490;
+            --primary-dark: #155e75;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg-body: #f8fafc;
             --bg-card: #ffffff;
-            --border: #e5e7eb;
+            --bg-subtle: #f1f5f9;
+            --bg-warn: #fffbeb;
+            --border-warn: #f59e0b;
+            --border: #e2e8f0;
         }
 
         @media (prefers-color-scheme: dark) {
             :root {
                 --primary: #22d3ee;
                 --primary-dark: #06b6d4;
-                --text-main: #f3f4f6;
-                --text-muted: #9ca3af;
-                --bg-body: #0b0f19;
-                --bg-card: #111827;
-                --border: #1f2937;
+                --text-main: #f1f5f9;
+                --text-muted: #94a3b8;
+                --bg-body: #0b1120;
+                --bg-card: #0f172a;
+                --bg-subtle: #1e293b;
+                --bg-warn: #29200b;
+                --border-warn: #fbbf24;
+                --border: #1e293b;
             }
         }
 
@@ -40,18 +45,18 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: var(--bg-body);
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.65;
             padding: 2rem 1rem;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 820px;
             margin: 0 auto;
         }
 
         header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2.25rem;
         }
 
         .logo-placeholder {
@@ -60,20 +65,20 @@
             justify-content: center;
             width: 64px;
             height: 64px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
+            background: linear-gradient(135deg, #06b6d4, #0891b2);
+            color: #ffffff;
             border-radius: 16px;
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            box-shadow: 0 4px 14px rgba(6, 182, 212, 0.4);
+            box-shadow: 0 4px 14px rgba(6, 182, 212, 0.35);
         }
 
         h1 {
-            font-size: 2.25rem;
+            font-size: 2.15rem;
             font-weight: 700;
             letter-spacing: -0.025em;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .subtitle {
@@ -81,16 +86,41 @@
             font-size: 0.95rem;
         }
 
+        .doc-nav {
+            display: inline-flex;
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+            padding: 0.35rem;
+            background-color: var(--bg-subtle);
+            border: 1px solid var(--border);
+            border-radius: 9999px;
+        }
+
+        .doc-nav a {
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .doc-nav a.active {
+            background-color: var(--bg-card);
+            color: var(--primary);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
         .card {
             background-color: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 20px;
-            padding: 2.5rem;
+            padding: 2.25rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         }
 
         section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 2.25rem;
         }
 
         section:last-child {
@@ -98,16 +128,24 @@
         }
 
         h2 {
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 0.9rem;
             color: var(--primary);
             border-bottom: 1px solid var(--border);
-            padding-bottom: 0.5rem;
+            padding-bottom: 0.45rem;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-top: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
         }
 
         p {
-            margin-bottom: 1rem;
+            margin-bottom: 0.9rem;
             color: var(--text-main);
             font-size: 1rem;
         }
@@ -126,7 +164,6 @@
             color: var(--primary);
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.2s;
         }
 
         a:hover {
@@ -134,9 +171,18 @@
             text-decoration: underline;
         }
 
+        .warning-box {
+            background-color: var(--bg-warn);
+            border-left: 4px solid var(--border-warn);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            color: var(--text-main);
+        }
+
         footer {
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 2.5rem;
             color: var(--text-muted);
             font-size: 0.85rem;
         }
@@ -144,12 +190,12 @@
         .badge {
             display: inline-block;
             padding: 0.25rem 0.75rem;
-            background-color: var(--border);
+            background-color: var(--bg-subtle);
             border-radius: 9999px;
             font-size: 0.75rem;
             font-weight: 600;
             color: var(--text-muted);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
         }
     </style>
 </head>
@@ -159,97 +205,135 @@
         <header>
             <div class="logo-placeholder">P</div>
             <h1>PomoTime Terms of Service</h1>
-            <p class="subtitle">Effective Date: May 22, 2026</p>
+            <p class="subtitle">Effective Date: November 19, 2026</p>
+            <nav class="doc-nav" aria-label="Legal documents">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html" class="active">Terms of Service</a>
+            </nav>
         </header>
 
         <main class="card">
-            <div class="badge">Terms of Service</div>
+            <div class="badge">Android &amp; iOS Mobile Application</div>
 
             <section>
                 <h2>1. Acceptance of Terms</h2>
                 <p>Welcome to <strong>PomoTime</strong>. These Terms of Service ("Terms") govern your access to and use
-                    of the PomoTime mobile application ("App"), developed by <strong>SLaboratory</strong> ("we", "our",
-                    "us").</p>
-                <p>By downloading, installing, or using the App, you agree to be bound by these Terms and our Privacy
-                    Policy. If you do not agree to these Terms, you must immediately uninstall and cease all use of the
-                    App.</p>
+                    of the PomoTime mobile application for Android and iOS ("App"), developed and published by
+                    <strong>SLaboratory</strong> ("we", "our", "us").</p>
+                <p>By downloading, installing, or using the App, you agree to be bound by these Terms and our
+                    <a href="privacy.html">Privacy Policy</a>. If you do not agree, do not use the App and uninstall it
+                    from your device.</p>
+                <p>These Terms are an agreement between you and SLaboratory only, and not with Apple Inc. or Google LLC.
+                    Neither Apple nor Google is responsible for the App, its content, maintenance, or support services.</p>
             </section>
 
             <section>
                 <h2>2. Description of Service</h2>
-                <p>PomoTime is a modern Pomodoro productivity and time-management application. It offers time-tracking,
-                    local task organization, productivity charts, customizable audio settings, themes, and integration
-                    with Spotify SDK for media control during focus intervals.</p>
+                <p>PomoTime is a productivity and mindful time-management application offering customizable Pomodoro
+                    timers, flexible breaks, built-in ambient melodies and binaural/isochronic focus beats, guided
+                    breathing exercises, wellness tips, break notes, local task management, productivity analytics, light
+                    and dark visual themes, and local backup export/import.</p>
             </section>
 
             <section>
-                <h2>3. Premium Subscriptions & Billing</h2>
-                <p>PomoTime offers a free-tier version with limited functionality. To unlock advanced features (such as
-                    unlimited timers, custom notification presets, all notification sounds, statistics, and exclusive
-                    visual skins), you may purchase a premium subscription.</p>
-
-                <h3>A. Subscription Tiers</h3>
-                <p>We provide two auto-renewing subscription options:</p>
+                <h2>3. Health, Wellness &amp; Audio Safety Disclaimer</h2>
+                <div class="warning-box">
+                    <strong>Not Medical Advice:</strong> PomoTime's guided breathing exercises, wellness tips, and
+                    binaural/isochronic audio beats are intended solely for general productivity, mindfulness, and
+                    relaxation support. They do <strong>not</strong> constitute medical, psychological, or therapeutic
+                    advice, diagnosis, or treatment, and PomoTime is not a medical device.
+                </div>
                 <ul>
-                    <li><strong>Monthly Subscription:</strong> Billed monthly on a recurring basis.</li>
-                    <li><strong>Yearly Subscription:</strong> Billed annually on a recurring basis.</li>
+                    <li><strong>Breathing Exercises:</strong> Stop any breathing exercise immediately if you feel
+                        dizzy, lightheaded, short of breath, anxious, or uncomfortable. Consult a qualified healthcare
+                        professional before using paced breathing techniques if you have respiratory, cardiovascular,
+                        neurological, or other medical conditions.</li>
+                    <li><strong>Audio &amp; Binaural Beats:</strong> Keep headphone and speaker volume at safe listening
+                        levels to avoid hearing discomfort or damage. Never use binaural beats, relaxation audio, or
+                        guided breathing exercises while driving, cycling, operating machinery, or performing tasks
+                        that require full situational awareness.</li>
                 </ul>
-                <p>Pricing is displayed clearly inside the App and is managed and processed via the Google Play Store
-                    billing system.</p>
+            </section>
+
+            <section>
+                <h2>4. Premium Subscriptions &amp; Purchases</h2>
+                <p>PomoTime provides core functionality free of charge, along with optional paid access
+                    ("<strong>PomoTime Premium</strong>") unlocking advanced capabilities as displayed inside the App,
+                    such as:</p>
+                <ul>
+                    <li>Unlimited custom timers and per-timer notification presets.</li>
+                    <li>Unlimited tasks, multiple pre-start reminders, and custom task alert sounds.</li>
+                    <li>Full library of 15+ ambient focus melodies, all binaural &amp; isochronic boosts, and all 4
+                        guided breathing patterns.</li>
+                    <li>All premium notification &amp; alarm tones for intervals, breaks, and tasks.</li>
+                    <li>Unlimited break notes and unrestricted health tips.</li>
+                    <li>Weekly analytics and custom date-range statistics (up to 60 days per query).</li>
+                    <li>Visual appearance customization (custom theme colors and interface animations).</li>
+                </ul>
+
+                <h3>A. Available Plans &amp; Platform Billing</h3>
+                <p>Available plans (which may include weekly, monthly, or annual auto-renewing subscriptions, and/or
+                    one-time lifetime access where offered) and current local prices are shown clearly on the purchase
+                    screen inside the App before you confirm payment.</p>
+                <p>Payments are processed directly by the <strong>Google Play Store</strong> (on Android) or the
+                    <strong>Apple App Store</strong> (on iOS), using RevenueCat to validate your entitlement status.</p>
 
                 <h3>B. Automatic Renewal</h3>
-                <p>Your subscription will automatically renew at the end of each billing cycle unless you turn off
-                    auto-renew or cancel your subscription at least 24 hours before the end of the current period.</p>
+                <p>Auto-renewing subscriptions renew automatically at the end of each billing cycle at the then-current
+                    rate unless canceled at least <strong>24 hours before the end of the current period</strong>. If a
+                    free trial is offered and you purchase a subscription before it ends, any unused trial portion is
+                    forfeited upon subscription purchase.</p>
 
-                <h3>C. Cancellation & Refunds</h3>
-                <p>You can cancel your subscription at any time through your Google Play Account settings. Following
-                    cancellation, you will continue to have premium access until the end of your current active billing
-                    period. All transactions are final, and we do not offer refunds or credits for partially unused
-                    subscription periods. Refund requests must be handled directly via Google Play Support.</p>
+                <h3>C. Managing, Canceling &amp; Refunds</h3>
+                <p>You can manage or cancel a subscription anytime in your <strong>Google Play Account settings</strong>
+                    (Android) or <strong>Apple ID Subscription settings</strong> (iOS). After cancellation, Premium
+                    features remain accessible until the end of the paid period. All purchases are processed and
+                    governed by Google Play or Apple App Store refund policies; refund requests must be submitted directly
+                    to Google Play Support or Apple Support.</p>
             </section>
 
             <section>
-                <h2>4. Intellectual Property Rights</h2>
-                <p>All intellectual property rights, trademarks, visual design elements, animations, source code, logos,
-                    assets, and documentation contained in PomoTime are owned by SLaboratory. You are granted a limited,
-                    personal, non-transferable, revocable license to use the App solely for your personal,
-                    non-commercial productivity purposes.</p>
+                <h2>5. Intellectual Property &amp; License</h2>
+                <p>All visual designs, animations, audio assets, software code, trademarks, logos, and documentation in
+                    PomoTime belong to SLaboratory or its licensors. Subject to these Terms, we grant you a limited,
+                    non-exclusive, non-transferable, revocable license to use the App for personal, non-commercial
+                    purposes.</p>
             </section>
 
             <section>
-                <h2>5. Spotify SDK Integration</h2>
-                <p>PomoTime includes third-party integration via the Spotify App Remote SDK. Use of this feature
-                    requires a valid Spotify account. You acknowledge that your use of the Spotify service is governed
-                    by Spotify's own Terms and Conditions. SLaboratory is not responsible for any issues, downtime, or
-                    account actions related to the Spotify platform.</p>
+                <h2>6. Local Data &amp; User Backups</h2>
+                <p>Because PomoTime stores timers, tasks, notes, and statistics locally on your device without server
+                    sync, you are responsible for maintaining backups of any data important to you and safeguarding any
+                    backup files you export to external storage.</p>
             </section>
 
             <section>
-                <h2>6. Limitation of Liability</h2>
-                <p>PomoTime is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, either
-                    express or implied. SLaboratory does not guarantee that the App will be completely free of errors,
-                    bugs, or data loss. In no event shall SLaboratory be liable for any direct, indirect, incidental,
-                    special, or consequential damages resulting from the use of or inability to use the App.</p>
+                <h2>7. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by applicable law, PomoTime is provided on an "<strong>AS IS</strong>"
+                    and "<strong>AS AVAILABLE</strong>" basis without warranties of any kind, express or implied. While
+                    we strive for reliable background timers and reminders, SLaboratory does not warrant uninterrupted or
+                    error-free operation (including platform battery-optimization restrictions or OS alarm delays). To
+                    the fullest extent permitted by law, SLaboratory shall not be liable for any indirect, incidental,
+                    special, consequential, or punitive damages, or loss of data arising out of your use of the App.</p>
             </section>
 
             <section>
-                <h2>7. Changes to Terms</h2>
-                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a
-                    revision is material, we will post the updated Terms on this website and update the "Effective Date"
-                    at the top. Your continued use of the App following any changes constitutes acceptance of those
-                    changes.</p>
+                <h2>8. Changes to Terms</h2>
+                <p>We may update these Terms from time to time. Material updates will be posted on this page with a
+                    revised "Effective Date" above. Continued use of the App after changes take effect constitutes your
+                    acceptance of the updated Terms.</p>
             </section>
 
             <section>
-                <h2>8. Contact Us</h2>
-                <p>If you have any questions, suggestions, or concerns regarding these Terms of Service, please contact
-                    us at:</p>
-                <p><strong>Email:</strong> <a href="mailto:slaboratory.dev@gmail.com">slaboratory.dev@gmail.com</a></p>
+                <h2>9. Contact Us</h2>
+                <p>For questions, support, or legal inquiries regarding these Terms of Service, please contact:</p>
+                <p><strong>Developer:</strong> SLaboratory<br>
+                   <strong>Email:</strong> <a href="mailto:slaboratory.support@gmail.com">slaboratory.support@gmail.com</a></p>
             </section>
         </main>
 
         <footer>
-            <p>&copy; 2026 SLaboratory. All rights reserved.</p>
+            <p>&copy; 2026 SLaboratory. All rights reserved. &bull; <a href="privacy.html">Privacy Policy</a></p>
         </footer>
     </div>
 </body>
